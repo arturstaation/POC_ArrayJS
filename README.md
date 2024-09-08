@@ -96,7 +96,15 @@ O projeto é estruturado em várias seções, cada uma abordando um conceito esp
 - Multiplicação de valores em um array.
 - Trabalhando com arrays de objetos para extrair propriedades.
 
-### 7. Aplicações
+### 7. Testar Metodos
+
+**Descrição:** Nesta seção, você pode testar e experimentar com o código JavaScript diretamente no navegador. O objetivo é permitir que você explore a funcionalidade dos métodos discutidos, como `sort()`, `filter()`, `spread`, `map()`, e `reduce()`.
+
+**Instruções:**
+
+Digite seu código JavaScript no espaço fornecido abaixo e clique em "Executar Código" para ver a saída. Você pode usar esta área para experimentar com diferentes exemplos e entender melhor como cada método funciona. 
+
+### 8. Aplicações
 
 **Descrição:** Nesta seção, são apresentadas aplicações práticas dos métodos discutidos. Usamos um array de objetos representando vendas de produtos para demonstrar como ordenar, calcular totais, filtrar e adicionar novos itens.
 
@@ -108,7 +116,7 @@ O projeto é estruturado em várias seções, cada uma abordando um conceito esp
 - Adição de um novo produto.
 - Extração de nomes dos produtos.
 
-### 8. Referências
+### 9. Referências
 
 **Descrição:** Aqui estão listadas as referências e recursos adicionais para aprofundar o conhecimento sobre métodos de arrays e outras funcionalidades do JavaScript.
 
