@@ -6,7 +6,7 @@ Gabriel Marques Gonçalves Almeida - 10375711
 
 ## Como Executar o Projeto
 
-Para visualizar o projeto, basta abrir o arquivo `index.html` em um navegador da web ou acessar o link [Texto do Link](URL do Link). O JavaScript será carregado e os exemplos funcionarão conforme descrito.
+Para visualizar o projeto, basta abrir o arquivo `index.html` em um navegador da web ou acessar o link [https://arturstaation.github.io/POC_ArrayJS/](https://arturstaation.github.io/POC_ArrayJS/). O JavaScript será carregado e os exemplos funcionarão conforme descrito.
 
 ## Visão Geral
 
