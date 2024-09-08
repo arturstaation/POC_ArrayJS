@@ -18,12 +18,11 @@
                 <li><a href="#metodo_filter"><strong>Metodo Filter</strong></a></li>
                 <li><a href="#metodo_spread"><strong>Metodo Spred</strong></a></li>
                 <li><a href="#metodo_map"><strong>Metodo Map</strong></a></li>
-                <li><a href="#teste"><strong>Entendendo Melhor</strong></a></li>
-                <li><a href="#prova_conceito"><strong>Aplicações</strong></a></li>
+                <li><a href="#aplicacoes"><strong>Aplicações</strong></a></li>
                 <li><a href="#referencias"><strong>Referencias</strong></a></li>
             </ul>
         </nav>
-        <p>Feito por:<br>Artur Valladares Hernandez Giacummo<br>Gabriel Marques Gonçalves Almeida</p>
+        <p><strong>Feito por:</strong><br>Artur Valladares Hernandez Giacummo<br>Gabriel Marques Gonçalves Almeida</p>
         <a href="ainda_nao_tem">Repositorio</a>
     </header>
     <main>
@@ -34,54 +33,443 @@
 
         <section id="definicao_array">
             <h2>O que é um Array</h2>
+            <p>Se você não conhece esse recurso, normalmente, para declarar várias variáveis, você precisa declarar uma
+                por uma. Veja um exemplo em código:</p>
+            <pre>
+                <code>
+                let item1 = 'Maçã';
+                let item2 = 'Banana';
+                let item3 = 'Laranja';
+                </code>
+            </pre>
+            <p>No entanto, utilizando um array (que significa "variedade" em português), você pode, por meio
+                de uma única variável, acessar uma <strong>lista</strong> de itens. Veja como fazer isso:</p>
+            <pre>
+                <code>
+                let frutas = ['Maçã', 'Banana', 'Laranja'];
+                </code>
+            </pre>
+            <p>Ou</p>
+            <pre>
+                <code>
+                let frutas = new Array('Maçã', 'Banana', 'Laranja');
+                </code>
+            </pre>
+            <h3>Acessando itens no Array</h3>
+            <p>Antes de começar a manipular listas (arrays), é necessario entender o que é um indice. Indice nada mais é
+                do que a posição que um termo esta localizado na lista.
+                Na programação o primeiro indice sempre é representado por 0, ou seja, o primeiro termo de uma lista
+                estará sempre na posição de número 0, o segundo na posição de numero 1 e assim por diante.
+                Com isso em mente, você pode acessar os itens no array usando seu índice:</p>
+            <pre>
+                <code>
+                let frutas = ['Maçã', 'Banana', 'Laranja'];
+        
+                // Acessando o primeiro item (índice 0)
+                let primeiraFruta = frutas[0]; // 'Maçã'
+        
+                // Acessando o segundo item (índice 1)
+                let segundaFruta = frutas[1]; // 'Banana'
+                </code>
+            </pre>
+            <h3>Adicionando itens ao Array</h3>
+            <p>Você pode adicionar itens ao array de diferentes maneiras:</p>
+            <h4>Utilizando o Metodo Push</h4>
+            <pre>
+                <code>
+                let frutas = ['Maçã', 'Banana', 'Laranja'];
+                frutas.push('Manga');
+                </code>
+            </pre>
+            <p>Ou</p>
+            <h4>Adicionando em uma posição específica</h4>
+            <pre>
+                <code>
+                let frutas = ['Maçã', 'Banana', 'Laranja'];
+                frutas[4] = 'Uva';
+                </code>
+            </pre>
+            <h3>Removendo itens do Array</h3>
+            <p>Remover itens de um array também é simples:</p>
+            <h4>Utilizando o Metodo Pop</h4>
+            <p>O metodo pop é utilizado para remover o ultimo item de um Array</p>
+            <pre>
+                <code>
+                let frutas = ['Maçã', 'Banana', 'Laranja'];
+                frutas.pop();
+                // Removendo um item específico (por índice)
+                frutas.splice(1, 1); // Remove 1 item a partir do índice 1
+                </code>
+            </pre>
+            <h4>Utilizando o Metodo Shift</h4>
+            <p>O metodo shift é utilizado para remover o primeiro item de um Array</p>
+            <pre>
+                <code>
+                let frutas = ['Maçã', 'Banana', 'Laranja'];
+                frutas.shift();
+        
+                // Removendo um item específico (por índice)
+                frutas.splice(1, 1); // Remove 1 item a partir do índice 1
+                </code>
+            </pre>
+            <h4>Utilizando o Meotodo Splice</h4>
+            <p>O metodo splice é utilizado para uma quantidade N de valores a partir de um indice informado de um Array.
+            </p>
+            <pre>
+                <code>
+                let frutas = ['Maçã', 'Banana', 'Laranja'];
+                frutas.splice(1, 1); // Remove 1 item a partir do índice 1
+                </code>
+            </pre>
+
         </section>
 
+
         <section id="metodo_sort">
-            <h2>Metodo Sort</h2>
+            <h2>Método Sort</h2>
+            <p>O método <code>sort()</code> é utilizado em JavaScript para ordenar os elementos de um array. Por padrão,
+                ele ordena os elementos como strings em ordem alfabética e crescente. Isso significa que os números
+                também serão ordenados como strings, o que pode causar resultados inesperados quando se trata de
+                números. Veja um exemplo a seguir.</p>
+
+            <h3>Exemplo Antes da Ordenação</h3>
+            <p>Considere o seguinte array de números e strings:</p>
+            <pre>
+                <code>
+                let itens = [40, 100, 1, 5, 25, 10, 'Banana', 'Maçã', 'Laranja'];
+                </code>
+            </pre>
+
+            <h3>Depois da Ordenação</h3>
+            <p>Após aplicar o método <code>sort()</code>, o array será ordenado da seguinte maneira:</p>
+            <pre>
+                <code>
+                itens.sort();
+                // Resultado: [1, 10, 100, 25, 40, 5, 'Banana', 'Laranja', 'Maçã']
+                </code>
+            </pre>
+
+            <h3>Ordenação Personalizada</h3>
+            <p>Você tambem pode utilizar uma função personalizada para ordenar o Array. Por exemplo, se você quiser
+                ordenar os números corretamente, precisará fornecer uma função de comparação ao método
+                <code>sort()</code>. Aqui está como fazer isso:
+            </p>
+            <pre>
+                <code>
+                let numeros = [40, 100, 1, 5, 25, 10];
+        
+                numeros.sort(function(a, b) {
+                    return a - b;
+                });
+                // Resultado: [1, 5, 10, 25, 40, 100]
+                </code>
+            </pre>
         </section>
 
         <section id="metodo_reduce">
-            <h2>Metodo Reduce</h2>
+            <h2>Método Reduce</h2>
+            <p>O método <code>reduce()</code> é utilizado em JavaScript para reduzir um array a um único valor. Ele
+                aplica uma função fornecida a um acumulador e a cada elemento do array (da esquerda para a direita),
+                resultando em um único valor final. Esse método é especialmente útil para somar valores, calcular
+                produtos, ou para transformar dados complexos em um único resultado.</p>
 
+            <p>O <code>reduce()</code> também aceita um segundo parâmetro opcional, que é o valor inicial do acumulador.
+                Se esse valor inicial for fornecido, a iteração começa com ele e o primeiro elemento do array. Se o
+                valor inicial não for fornecido, o primeiro elemento do array será usado como o valor inicial, e a
+                iteração começará a partir do segundo elemento. A escolha de fornecer ou não um valor inicial depende do
+                que você deseja alcançar com a operação de redução.</p>
+
+
+            <h3>Exemplo de Uso do Reduce</h3>
+            <p>Considere o seguinte array de números:</p>
+            <pre>
+                <code>
+                let numeros = [1, 2, 3, 4, 5];
+                </code>
+            </pre>
+
+            <p>Se quisermos somar todos os números desse array, podemos usar o método <code>reduce()</code> da seguinte
+                maneira:</p>
+            <pre>
+                <code>
+                let soma = numeros.reduce(function(acumulador, valorAtual) {
+                    return acumulador + valorAtual;
+                }, 0);
+                // Resultado: 15
+                </code>
+            </pre>
+
+            <h3>Entendendo o Exemplo</h3>
+            <p>No exemplo acima, a função é chamada para cada elemento do array, onde
+                <code>acumulador</code> mantém o valor acumulado da soma e <code>valorAtual</code> é o valor do elemento
+                atual sendo processado. Começamos com <code>acumulador</code> igual a 0 (o segundo argumento passado ao
+                <code>reduce()</code>) e, à medida que iteramos sobre o array, somamos cada valor ao acumulador.
+            </p>
         </section>
+
         <section id="metodo_filter">
-            <h2>Metodo Filter</h2>
+            <h2>Método Filter</h2>
+            <p>O método <code>filter()</code> é utilizado em JavaScript para criar um novo array com todos os elementos
+                que passam em um teste (ou condição) fornecido por uma função. Ele não modifica o array original; em vez
+                disso, retorna um novo array contendo apenas os elementos que atendem à condição especificada na função.
+            </p>
+
+            <p>A função é chamada para cada elemento do array, e deve retornar <code>true</code> ou
+                <code>false</code>. Os elementos para os quais a função retorna <code>true</code> são incluídos no novo
+                array, enquanto os elementos que retornam <code>false</code> são excluídos.
+            </p>
+
+            <p>Além disso, o método <code>filter()</code> aceita um segundo parâmetro opcional, que é o valor de
+                <code>this</code> a ser usado dentro da função de callback. Se esse parâmetro for fornecido, ele será
+                utilizado como o contexto <code>this</code> durante a execução da função de callback. Caso contrário, o
+                valor de <code>this</code> dentro da função de callback será <code>undefined</code> ou, se a função for
+                definida em um contexto específico, o valor desse contexto.
+            </p>
+
+            <h3>Exemplo de Uso do Filter</h3>
+            <pre>
+                <code>
+                // Array de números
+                let numeros = [10, 20, 30, 40, 50];
+        
+                // Função de callback para filtrar números maiores que um valor definido em this
+                function filtrarMaioresQue(valor) {
+                    return valor > this.limite;
+                }
+        
+                // Objeto que define o valor de limite
+                let contexto = { limite: 25 };
+        
+                // Usando o filter com um segundo parâmetro para definir o contexto this
+                let resultado = numeros.filter(filtrarMaioresQue, contexto);
+        
+                console.log(resultado); // Resultado: [30, 40, 50]
+                </code>
+            </pre>
+            <h3>Outro Exemplo de Uso do Filter</h3>
+            <pre>
+                <code>
+                // Array de números
+                let numeros = [10, 20, 30, 40, 50];
+
+                // Valor limite para filtrar os números
+                let limite = 25;
+
+                // Função de callback para filtrar números maiores que o limite
+                function filtrarMaioresQue(valor) {
+                    return valor > limite;
+                }
+
+                // Usando o filter sem segundo parâmetro
+                let resultado = numeros.filter(filtrarMaioresQue);
+
+                console.log(resultado); // Resultado: [30, 40, 50]
+                </code>
+            </pre>
 
         </section>
-        <section id="metodo_spread">
-            <h2>Metodo Spread</h2>
 
+
+        <section id="metodo_spread">
+            <h2>Método Spread</h2>
+            <p>O operador de espalhamento, ou <code>spread</code>, é uma funcionalidade introduzida no JavaScript ES6
+                que permite expandir elementos de um array, objeto iterável, ou até mesmo uma string, em um local onde
+                múltiplos elementos são esperados. O operador <code>spread</code> é representado por três pontos
+                (<code>...</code>) e é amplamente utilizado para copiar, concatenar arrays, passar múltiplos argumentos
+                para funções, e clonar objetos de forma superficial.</p>
+
+            <h3>Exemplo de Uso com Arrays</h3>
+            <p>O operador <code>spread</code> pode ser usado para combinar dois ou mais arrays em um novo array:</p>
+            <pre>
+                <code>
+                let frutas = ['Maçã', 'Banana'];
+                let citricos = ['Laranja', 'Limão'];
+        
+                // Combinando arrays usando o operador spread
+                let todasFrutas = [...frutas, ...citricos];
+        
+                console.log(todasFrutas); // Resultado: ['Maçã', 'Banana', 'Laranja', 'Limão']
+                </code>
+            </pre>
         </section>
         <section id="metodo_map">
-            <h2>Metodo Map</h2>
+            <h2>Método Map</h2>
+            <p>O método <code>map()</code> é uma funcionalidade em JavaScript que permite criar um novo array, populado
+                com os resultados da aplicação de uma função em cada elemento do array original. Diferente de outros
+                métodos, como <code>forEach()</code>, o <code>map()</code> retorna um novo array sem modificar o array
+                original, sendo uma excelente escolha quando se deseja transformar os dados de um array.</p>
 
-        </section>
-        <section id="teste">
-            <h2>Faça Seus Proprios Testes</h2>
+            <h3>Exemplo de Uso do Map</h3>
+            <p>Vamos considerar um exemplo simples onde temos um array de números e desejamos criar um novo array com
+                cada número multiplicado por 2:</p>
+            <pre>
+                <code>
+                // Array de números
+                let numeros = [1, 2, 3, 4, 5];
+        
+                // Usando o método map para criar um novo array com os números multiplicados por 2
+                let numerosMultiplicados = numeros.map(function(numero) {
+                    return numero * 2;
+                });
+        
+                console.log(numerosMultiplicados); // Resultado: [2, 4, 6, 8, 10]
+                </code>
+            </pre>
+            <h3>O que é um Objeto em JavaScript?</h3>
+            <p>Em JavaScript, um objeto é uma coleção de propriedades, cada uma associada a um valor. As propriedades
+                são pares de chave e valor, onde a chave é uma string (ou um símbolo) e o valor pode ser qualquer tipo
+                de dado, incluindo outros objetos ou funções. Objetos são amplamente utilizados para armazenar e
+                organizar dados relacionados.</p>
 
+            <h3>Como Criar um Objeto</h3>
+            <p>Você pode criar um objeto em JavaScript da seguinte maneira:</p>
+
+            <h3>Literal de Objeto</h3>
+            <pre>
+        <code>
+        // Criando um objeto usando a sintaxe de literal de objeto
+        let pessoa = {
+            nome: 'João',
+            idade: 30,
+            profissao: 'Desenvolvedor'
+        };
+        </code>
+    </pre>
+
+            <h3>Exemplo de Uso com Objetos</h3>
+            <p>O método <code>map()</code> também é muito útil ao trabalhar com arrays de objetos. Por exemplo, podemos
+                ter um array de objetos representando produtos e desejamos extrair apenas os nomes desses produtos:</p>
+            <pre>
+        <code>
+        // Array de objetos representando produtos
+        let produtos = [
+            { nome: 'Camisa', preco: 29.99 },
+            { nome: 'Calça', preco: 49.99 },
+            { nome: 'Sapato', preco: 79.99 }
+        ];
+
+        // Usando map para extrair apenas os nomes dos produtos
+        let nomesProdutos = produtos.map(function(produto) {
+            return produto.nome;
+        });
+
+        console.log(nomesProdutos); // Resultado: ['Camisa', 'Calça', 'Sapato']
+        </code>
+    </pre>
         </section>
-        <section id="prova_conceito">
+        <section id="aplicacoes">
             <h2>Aplicações</h2>
+            <p>Vamos considerar um cenário em que temos um array de objetos representando vendas de produtos em uma
+                loja. Nosso objetivo é processar esses dados para obter informações úteis. Usaremos os métodos
+                <code>sort()</code>, <code>reduce()</code>, <code>filter()</code>, <code>spread</code>, e
+                <code>map()</code> para resolver o problema.
+            </p>
 
+            <h3>Problema</h3>
+            <p>Temos o seguinte array de objetos de vendas:</p>
+            <pre><code>
+        let vendas = [
+            { produto: 'Camisa', quantidade: 10, preco: 25.00 },
+            { produto: 'Calça', quantidade: 5, preco: 45.00 },
+            { produto: 'Sapato', quantidade: 2, preco: 80.00 },
+            { produto: 'Tênis', quantidade: 7, preco: 60.00 },
+            { produto: 'Jaqueta', quantidade: 3, preco: 100.00 }
+        ];
+            </code></pre>
+
+            <h3>1. Ordenar os Produtos por Preço</h3>
+            <p>Queremos ordenar os produtos pelo preço em ordem crescente. Usaremos o método <code>sort()</code> para
+                isso:</p>
+            <pre><code>
+        let produtosOrdenadosPorPreco = vendas.sort(function(a, b) {
+            return a.preco - b.preco;
+        });
+        
+        console.log(produtosOrdenadosPorPreco);
+        // Resultado: [{ produto: 'Camisa', quantidade: 10, preco: 25.00 }, { produto: 'Calça', quantidade: 5, preco: 45.00 }, { produto: 'Tênis', quantidade: 7, preco: 60.00 }, { produto: 'Sapato', quantidade: 2, preco: 80.00 }, { produto: 'Jaqueta', quantidade: 3, preco: 100.00 }]
+            </code></pre>
+            <p><strong>Explicação:</strong> O método <code>sort()</code> foi usado com uma função de comparação para
+                ordenar os produtos com base no preço.</p>
+
+            <h3>2. Calcular o Total de Vendas</h3>
+            <p>Precisamos calcular o total das vendas de todos os produtos. Usaremos o método <code>reduce()</code>:</p>
+            <pre><code>
+        let totalVendas = vendas.reduce(function(acumulador, venda) {
+            return acumulador + (venda.quantidade * venda.preco);
+        }, 0);
+        
+        console.log(totalVendas);
+        // Resultado: 675.00
+            </code></pre>
+            <p><strong>Explicação:</strong> O método <code>reduce()</code> foi utilizado para somar o total de vendas
+                multiplicando a quantidade pelo preço de cada produto e acumulando o resultado.</p>
+
+            <h3>3. Filtrar Produtos com Quantidade Maior que 5</h3>
+            <p>Queremos filtrar apenas os produtos com quantidade maior que 5. Usaremos o método <code>filter()</code>:
+            </p>
+            <pre><code>
+        let produtosQuantidadeMaiorQue5 = vendas.filter(function(venda) {
+            return venda.quantidade > 5;
+        });
+        
+        console.log(produtosQuantidadeMaiorQue5);
+        // Resultado: [{ produto: 'Camisa', quantidade: 10, preco: 25.00 }, { produto: 'Tênis', quantidade: 7, preco: 60.00 }]
+            </code></pre>
+            <p><strong>Explicação:</strong> O método <code>filter()</code> foi usado para criar um novo array contendo
+                apenas os produtos cuja quantidade é maior que 5.</p>
+
+            <h3>4. Adicionar um Novo Produto à Lista</h3>
+            <p>Queremos adicionar um novo produto à lista de vendas. Usaremos o operador <code>spread</code> para isso:
+            </p>
+            <pre><code>
+        let novoProduto = { produto: 'Chapéu', quantidade: 4, preco: 20.00 };
+        let vendasAtualizadas = [...vendas, novoProduto];
+        
+        console.log(vendasAtualizadas);
+        // Resultado: [{ produto: 'Camisa', quantidade: 10, preco: 25.00 }, { produto: 'Calça', quantidade: 5, preco: 45.00 }, { produto: 'Sapato', quantidade: 2, preco: 80.00 }, { produto: 'Tênis', quantidade: 7, preco: 60.00 }, { produto: 'Jaqueta', quantidade: 3, preco: 100.00 }, { produto: 'Chapéu', quantidade: 4, preco: 20.00 }]
+            </code></pre>
+            <p><strong>Explicação:</strong> O operador <code>spread</code> foi utilizado para adicionar o novo produto
+                ao array de vendas existente, criando um novo array com todos os produtos.</p>
+
+            <h3>5. Criar um Array Apenas com os Nomes dos Produtos</h3>
+            <p>Precisamos extrair apenas os nomes dos produtos. Usaremos o método <code>map()</code>:</p>
+            <pre><code>
+        let nomesProdutos = vendas.map(function(venda) {
+            return venda.produto;
+        });
+        
+        console.log(nomesProdutos);
+        // Resultado: ['Camisa', 'Calça', 'Sapato', 'Tênis', 'Jaqueta']
+            </code></pre>
+            <p><strong>Explicação:</strong> O método <code>map()</code> foi usado para criar um novo array contendo
+                apenas os nomes dos produtos extraídos dos objetos de vendas.</p>
         </section>
+
         <section id="referencias">
-            <h2>Referencias</h2>
-            <a href="https://www.w3schools.com/js/js_arrays.asp"> W3Schools - JavaScript Arrays</a>
-            <a href="https://dev.to/ivanadokic/javascript-array-methods-filter-map-reduce-and-sort-32m5">Dev -
-                JavaScript Array methods: Filter, Map, Reduce, and Sort</a>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce">Mozilla
-                - Array.prototype.reduce()</a>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">Mozilla
-                - Array.prototype.map()</a>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">Mozilla
-                - Array.prototype.sort()</a>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">Mozilla
-                - Array.prototype.filter()</a>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">Mozilla
-                - Spread syntax (...)</a>
-            <a href="https://www.dio.me/articles/o-operador-spread-em-javascript"> Dio - O operador spread em
-                JavaScript</a>
+            <h2>Referências</h2>
+            <ul>
+                <li><a href="https://www.w3schools.com/js/js_arrays.asp">W3Schools - JavaScript Arrays</a></li>
+                <li><a href="https://dev.to/ivanadokic/javascript-array-methods-filter-map-reduce-and-sort-32m5">Dev
+                        - JavaScript Array methods: Filter, Map, Reduce, and Sort</a></li>
+                <li><a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce">Mozilla
+                        - Array.prototype.reduce()</a></li>
+                <li><a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">Mozilla
+                        - Array.prototype.map()</a></li>
+                <li><a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">Mozilla
+                        - Array.prototype.sort()</a></li>
+                <li><a
+                        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">Mozilla
+                        - Array.prototype.filter()</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax">Mozilla
+                        - Spread syntax (...)</a></li>
+                <li><a href="https://www.dio.me/articles/o-operador-spread-em-javascript">Dio - O operador spread em
+                        JavaScript</a></li>
+            </ul>
         </section>
+
 
 
     </main>
