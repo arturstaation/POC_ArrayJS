@@ -4,9 +4,34 @@
 Artur Valladares Hernandez Giacummo - 10389053 <br>
 Gabriel Marques Gonçalves Almeida - 10375711
 
-## Como Executar o Projeto
+## Como Executar o Código
 
-Para visualizar o projeto, basta abrir o arquivo `index.html` em um navegador da web ou acessar o link [https://arturstaation.github.io/POC_ArrayJS/](https://arturstaation.github.io/POC_ArrayJS/). O JavaScript será carregado e os exemplos funcionarão conforme descrito.
+Para acessar o site proposto por esta prova de conceito (POC), você tem duas opções:
+
+### Opção 1: Acesso Online
+
+Você pode visualizar o projeto diretamente no navegador acessando o seguinte link:
+[**https://arturstaation.github.io/POC_ArrayJS/**](https://arturstaation.github.io/POC_ArrayJS/)
+
+### Opção 2: Acesso Local
+
+Se preferir trabalhar com uma cópia local do projeto, siga os passos abaixo:
+
+1. **Baixar o Projeto**
+   - Acesse o repositório do projeto e clique em **"Código"**.
+   - Selecione a opção **"Baixar ZIP"** para obter o arquivo compactado do projeto.
+
+2. **Descompactar o Arquivo**
+   - Após o download, localize o arquivo ZIP em seu computador.
+   - Descompacte o arquivo para uma pasta de sua escolha.
+
+3. **Abrir o Arquivo HTML**
+   - Navegue até a pasta descompactada.
+   - Abra o arquivo `index.html` em um navegador web de sua preferência (como Google Chrome, Mozilla Firefox, etc.).
+
+Com esses passos, você poderá visualizar e interagir com a prova de conceito localmente em seu computador.
+
+Se precisar de ajuda adicional ou encontrar algum problema, sinta-se à vontade para entrar em contato!
 
 ## Visão Geral
 
