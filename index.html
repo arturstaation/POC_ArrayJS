@@ -129,9 +129,15 @@
         <section id="metodo_sort">
             <h2>Método Sort</h2>
             <p>O método <code>sort()</code> é utilizado em JavaScript para ordenar os elementos de um array. Por padrão,
-                ele ordena os elementos como strings em ordem alfabética e crescente. Isso significa que os números
-                também serão ordenados como strings, o que pode causar resultados inesperados quando se trata de
-                números. Veja um exemplo a seguir.</p>
+                ele
+                ordena os elementos como strings em ordem alfabética e crescente. Isso significa que os números também
+                serão
+                ordenados como strings, o que pode causar resultados inesperados quando se trata de números. Além disso,
+                o método
+                <code>sort()</code> altera o array original, ou seja, a ordenação é feita diretamente no array em que é
+                chamado,
+                sem criar uma cópia. Veja um exemplo a seguir.
+            </p>
 
             <h3>Exemplo Antes da Ordenação</h3>
             <p>Considere o seguinte array de números e strings:</p>
@@ -146,6 +152,7 @@
             <pre>
                 <code>
                 itens.sort();
+                console.log(itens);
                 // Resultado: [1, 10, 100, 25, 40, 5, 'Banana', 'Laranja', 'Maçã']
                 </code>
             </pre>
@@ -162,6 +169,7 @@
                 numeros.sort(function(a, b) {
                     return a - b;
                 });
+                console.log(numeros);
                 // Resultado: [1, 5, 10, 25, 40, 100]
                 </code>
             </pre>
@@ -196,7 +204,7 @@
                 let soma = numeros.reduce(function(acumulador, valorAtual) {
                     return acumulador + valorAtual;
                 }, 0);
-                // Resultado: 15
+                console.log(soma); // Resultado: 15
                 </code>
             </pre>
 
@@ -370,7 +378,15 @@
             </p>
 
             <textarea id="codeInput" placeholder="// Digite seu código aqui..."></textarea>
-            <btn onclick="runCode()">Executar Código</btn>
+            <div id="botoes">
+                <btn onclick="changeInputSort()">Exemplo Sort</btn>
+                <btn onclick="changeInputReduce()">Exemplo Reduce</btn>
+                <btn onclick="changeInputFilter()">Exemplo Filter</btn>
+                <btn onclick="changeInputSpread()">Exemplo Spread</btn>
+                <btn onclick="changeInputMap()">Exemplo Map</btn>
+            </div>
+
+            <btn onclick="runCode()" id="runButton">Executar Código</btn>
 
             <h3>Resultado</h3>
             <pre id="output"></pre>
